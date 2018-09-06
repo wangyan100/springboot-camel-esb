@@ -69,6 +69,12 @@
 			<artifactId>camel-cxf-transport</artifactId>
 			<version>${camel.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http-jetty</artifactId>
+			<version>3.2.5</version>
+		</dependency>
 		<!-- test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

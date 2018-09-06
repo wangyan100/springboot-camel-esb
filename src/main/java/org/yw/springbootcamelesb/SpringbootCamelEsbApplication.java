@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringbootCamelEsbApplication {
 
 	public static void main(String[] args) {
+		System.setProperty("soapEndpointPort", "9006");
 		SpringApplication.run(SpringbootCamelEsbApplication.class, args);
 	}
 }
