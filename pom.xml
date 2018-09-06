@@ -57,6 +57,16 @@
 			<version>${camel.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-cxf</artifactId>
+			<version>${camel.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-cxf-transport</artifactId>
+			<version>${camel.version}</version>
+		</dependency>
 		<!-- test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
