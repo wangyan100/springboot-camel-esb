@@ -6,8 +6,8 @@ version = '0.0.1-SNAPSHOT'
 
 description = """springboot-camel-esb"""
 
-sourceCompatibility = 1.5
-targetCompatibility = 1.5
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 tasks.withType(JavaCompile) {
 	options.encoding = 'UTF-8'
 }
@@ -15,8 +15,8 @@ tasks.withType(JavaCompile) {
 
 
 repositories {
-     //mavenLocal()
-    maven { url "http://repo.maven.apache.org/maven2" }
+        
+     maven { url "http://repo.maven.apache.org/maven2" }
 }
 dependencies {
     compile(group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'2.0.4.RELEASE') {
@@ -26,6 +26,8 @@ exclude(module: 'spring-boot-starter-tomcat')
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version:'2.0.4.RELEASE'
     compile group: 'org.apache.camel', name: 'camel-spring-boot-starter', version:'2.22.0'
     compile group: 'org.apache.camel', name: 'camel-stream-starter', version:'2.22.0'
+    compile group: 'org.apache.camel', name: 'camel-cxf', version:'2.22.0'
+    compile group: 'org.apache.camel', name: 'camel-cxf-transport', version:'2.22.0'
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'2.0.4.RELEASE'
     testCompile group: 'org.apache.camel', name: 'camel-test-spring', version:'2.22.0'
 }

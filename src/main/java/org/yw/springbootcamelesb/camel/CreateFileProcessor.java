@@ -2,6 +2,7 @@ package org.yw.springbootcamelesb.camel;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.apache.camel.Exchange;
@@ -13,6 +14,7 @@ import org.yw.springbootcamelesb.soap.FileCreationStatus;
 
 public class CreateFileProcessor implements Processor {
 	private static final Logger LOG = LoggerFactory.getLogger(CreateFileProcessor.class);
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
 
 	public void process(Exchange exchange) throws Exception {
 		FileCreationStatus status = new FileCreationStatus();
@@ -26,7 +28,7 @@ public class CreateFileProcessor implements Processor {
 			status.setFileName(fileName);
 			status.setCreatedForPersonName(createdForPersonName);
 			createFile(fileName, fileContent);
-			status.setCreationTime(new Date());
+			status.setCreationTime(sdf.format(new Date()));
 			status.setStatus("File is Created Successfully");
 		} catch (Exception e) {
 			status.setStatus("File Creation Failed");
