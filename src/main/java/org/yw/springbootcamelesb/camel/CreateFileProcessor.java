@@ -40,5 +40,7 @@ public class CreateFileProcessor implements Processor {
 	private void createFile(String fileName, String text) throws FileNotFoundException {
 		PrintWriter out = new PrintWriter(fileName);
 		out.println(text);
+		out.flush();
+		out.close();
 	}
 }
