@@ -1,23 +1,36 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.4.RELEASE")
+    }
+}
+
+
 apply plugin: 'java'
 apply plugin: 'maven'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 
-group = 'org.yw'
-version = '0.0.1-SNAPSHOT'
-
-description = """springboot-camel-esb"""
+bootJar {
+    baseName = 'org.yw'
+    version =  '0.0.1-SNAPSHOT'
+}
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
 tasks.withType(JavaCompile) {
 	options.encoding = 'UTF-8'
 }
 
 
-
 repositories {
-        
-     maven { url "http://repo.maven.apache.org/maven2" }
+    mavenCentral()
 }
+
 dependencies {
     compile(group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'2.0.4.RELEASE') {
 exclude(module: 'spring-boot-starter-tomcat')
@@ -28,6 +41,7 @@ exclude(module: 'spring-boot-starter-tomcat')
     compile group: 'org.apache.camel', name: 'camel-stream-starter', version:'2.22.0'
     compile group: 'org.apache.camel', name: 'camel-cxf', version:'2.22.0'
     compile group: 'org.apache.camel', name: 'camel-cxf-transport', version:'2.22.0'
+    compile group: 'org.apache.cxf', name: 'cxf-rt-transports-http-jetty', version:'3.2.5'
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'2.0.4.RELEASE'
     testCompile group: 'org.apache.camel', name: 'camel-test-spring', version:'2.22.0'
 }
