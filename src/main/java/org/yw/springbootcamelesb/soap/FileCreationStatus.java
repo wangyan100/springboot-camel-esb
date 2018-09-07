@@ -1,7 +1,6 @@
 package org.yw.springbootcamelesb.soap;
 
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
