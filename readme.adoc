@@ -2,7 +2,7 @@
 
 This example shows how to work with a simple Apache Camel application using Spring Boot.
 
-The example generates messages using timer trigger, writes them to standard output.
+The example has two endpoints , one is soap another is file , a soap request will generate a file
 
 === Camel routes
 
