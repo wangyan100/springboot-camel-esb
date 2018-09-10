@@ -38,6 +38,16 @@ To show detailed information for a specific route
 ----
 curl -XGET -s http://localhost:8080/actuator/camelroutes/{id}/detail
 
+
+
+===  SOAP UI Test Result
+
+![1536582205882](screenshot/soapuitest.PNG)
+
+
+
+
+
 === To get Reference
 
 SpringBoot from Zero to Hero https://www.youtube.com/watch?v=aA4tfBGY6jY 

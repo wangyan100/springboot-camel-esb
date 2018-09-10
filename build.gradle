@@ -37,7 +37,7 @@ dependencies {
     }
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-undertow', version:'2.0.4.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version:'2.0.4.RELEASE'
-    compile("org.springframework.boot:spring-boot-devtools",version:'2.0.4.RELEASE')
+    compile("org.springframework.boot:spring-boot-devtools:2.0.4.RELEASE")
     compile group: 'org.apache.camel', name: 'camel-spring-boot-starter', version:'2.22.0'
     compile group: 'org.apache.camel', name: 'camel-stream-starter', version:'2.22.0'
     compile group: 'org.apache.camel', name: 'camel-cxf', version:'2.22.0'
