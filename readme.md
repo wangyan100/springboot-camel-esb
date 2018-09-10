@@ -47,7 +47,6 @@ curl -XGET -s http://localhost:8080/actuator/camelroutes/{id}/detail
 
 ## To get Reference
 
-SpringBoot from Zero to Hero
 https://www.youtube.com/watch?v=aA4tfBGY6jY 
 https://www.baeldung.com/apache-camel-spring-boot 
 https://itnext.io/migrating-a-spring-boot-service-to-kubernetes-in-5-steps-7c1702da81b6
