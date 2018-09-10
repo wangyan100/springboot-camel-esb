@@ -13,6 +13,7 @@ public class FileCreationStatus implements Serializable {
 	private String status;
 	private String fileName;
 	private String creationTime;
+
 	public String getCreationTime() {
 		return creationTime;
 	}
@@ -47,5 +48,4 @@ public class FileCreationStatus implements Serializable {
 		this.createdForPersonName = createdForPersonName;
 	}
 
-	
 }
