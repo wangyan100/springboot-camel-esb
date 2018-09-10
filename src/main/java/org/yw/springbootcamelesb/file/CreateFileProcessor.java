@@ -25,6 +25,8 @@ public class CreateFileProcessor implements Processor {
 			String fileContent = (String) msgList.get(1);
 			String createdForPersonName = (String) msgList.get(2);
 
+			LOG.debug("fileName : {} , createdForPersonName : {} ", fileName, createdForPersonName);
+
 			status.setFileName(fileName);
 			status.setCreatedForPersonName(createdForPersonName);
 			createFile(fileName, fileContent);
