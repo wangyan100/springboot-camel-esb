@@ -4,4 +4,4 @@ logging:
  level:
    org.yw: DEBUG
  file: ./springbootcamelesb.log
- root: INFO
+ root: WARN
