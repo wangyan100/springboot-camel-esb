@@ -5,3 +5,7 @@ logging:
    org.yw: DEBUG
  file: ./springbootcamelesb.log
  root: WARN
+ 
+# expose actuator endpoint via HTTP
+management:
+ endpoints.web.exposure.include: info,health,camelroutes
