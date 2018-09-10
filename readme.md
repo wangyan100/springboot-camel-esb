@@ -43,16 +43,15 @@ curl -XGET -s http://localhost:8080/actuator/camelroutes/{id}/detail
 ###  SOAP UI Test Result
 
 ![soapui test](screenshot/soapuitest.PNG)
-![soapui test](screenshot/soapuitest.PNG)
 
 
 ## To get Reference
 
-SpringBoot from Zero to Hero https://www.youtube.com/watch?v=aA4tfBGY6jY 
-Apache Camel with Spring Boot
+SpringBoot from Zero to Hero
+https://www.youtube.com/watch?v=aA4tfBGY6jY 
 https://www.baeldung.com/apache-camel-spring-boot 
 https://itnext.io/migrating-a-spring-boot-service-to-kubernetes-in-5-steps-7c1702da81b6
 https://spring.io/guides/gs/spring-boot-docker/
 http://camel.apache.org/spring-boot.html
 https://www.baeldung.com/apache-camel-spring-boot
-https://medium.com/@mzimecki/spring-boot-apache-camel-web-service-a90696d8ac36
+https://medium.com/@mzimecki/spring-boot-apache-camel-web-service-a90696d8ac36  
