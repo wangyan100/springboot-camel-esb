@@ -1,4 +1,4 @@
-# SpringBoot + Apche Camel ESB Example 
+# SpringBoot + Apache Camel ESB Example 
 
 This example shows how to work with a simple Apache Camel application using Spring Boot.
 
