@@ -5,12 +5,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class SpringbootCamelEsbApplication {
-    //@ConditionalOnProperty( prefix="enable",name = "eventnotifier")
     @ConditionalOnExpression("${enable.eventnotifier:true}")
     @Bean
     LoggingSentEventNotifer loggingSentEventNotifer() {
