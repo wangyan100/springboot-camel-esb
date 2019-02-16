@@ -10,6 +10,8 @@ logging:
 management:
  endpoints.web.exposure.include: info,health,camelroutes
  server.port: 8080
+
+soap.port: 9009
  
 enable:
     eventnotifier: true

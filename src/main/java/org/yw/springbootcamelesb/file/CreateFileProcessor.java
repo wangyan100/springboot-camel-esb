@@ -13,37 +13,42 @@ import org.slf4j.LoggerFactory;
 import org.yw.springbootcamelesb.soap.FileCreationStatus;
 
 public class CreateFileProcessor implements Processor {
-	private static final Logger LOG = LoggerFactory.getLogger(CreateFileProcessor.class);
-	private static SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm:ss.SSS");
 
-	public void process(Exchange exchange) throws Exception {
-		FileCreationStatus status = new FileCreationStatus();
-		// Get the parameters list which element is the holder.
-		try {
-                        exchange.getIn().getHeaders().forEach((k,v)->System.out.println("Item : " + k + " Count : " + v));
-			MessageContentsList msgList = (MessageContentsList) exchange.getIn().getBody();
-			String fileName = (String) msgList.get(0);
-			String fileContent = (String) msgList.get(1);
-			String createdForPersonName = (String) msgList.get(2);
+    private static final Logger LOG = LoggerFactory.getLogger(CreateFileProcessor.class);
+    private static SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm:ss.SSS");
 
-			LOG.debug("fileName : {} , createdForPersonName : {} ", fileName, createdForPersonName);
+    public void process(Exchange exchange) throws Exception {
+        FileCreationStatus status = new FileCreationStatus();
+        // Get the parameters list which element is the holder.
+        try {
+            if (exchange.getIn() != null&&exchange.getIn().getBody()!=null) {
+                exchange.getIn().getHeaders().forEach((k, v) -> System.out.println("Item : " + k + " Count : " + v));
+                MessageContentsList msgList = (MessageContentsList) exchange.getIn().getBody();
+                if (msgList != null & msgList.size() > 0) {
+                    String fileName = (String) msgList.get(0);
+                    String fileContent = (String) msgList.get(1);
+                    String createdForPersonName = (String) msgList.get(2);
 
-			status.setFileName(fileName);
-			status.setCreatedForPersonName(createdForPersonName);
-			createFile(fileName, fileContent);
-			status.setCreationTime(sdf.format(new Date()));
-			status.setStatus("File is Created Successfully");
-		} catch (Exception e) {
-			status.setStatus("File Creation Failed");
-			LOG.error("erorr happened ", e);
-		}
-		exchange.getOut().setBody(status);
-	}
+                    LOG.debug("fileName : {} , createdForPersonName : {} ", fileName, createdForPersonName);
 
-	private void createFile(String fileName, String text) throws FileNotFoundException {
-		PrintWriter out = new PrintWriter(fileName);
-		out.println(text);
-		out.flush();
-		out.close();
-	}
+                    status.setFileName(fileName);
+                    status.setCreatedForPersonName(createdForPersonName);
+                    createFile(fileName, fileContent);
+                    status.setCreationTime(sdf.format(new Date()));
+                    status.setStatus("File is Created Successfully");
+                }
+            }
+        } catch (Exception e) {
+            status.setStatus("File Creation Failed");
+            LOG.error("erorr happened ", e);
+        }
+        exchange.getOut().setBody(status);
+    }
+
+    private void createFile(String fileName, String text) throws FileNotFoundException {
+        PrintWriter out = new PrintWriter(fileName);
+        out.println(text);
+        out.flush();
+        out.close();
+    }
 }

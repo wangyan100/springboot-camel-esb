@@ -11,7 +11,7 @@ import org.yw.springbootcamelesb.soap.FileCreationStatus;
 @Component
 public class CamelRouteBuilder extends RouteBuilder {
 
-    private static final String SOAP_ENDPOINT_URI = "cxf://http://localhost:{{soapEndpointPort}}/soap"
+    private static final String SOAP_ENDPOINT_URI = "cxf://http://0.0.0.0:{{soap.port}}/soap"
             + "?serviceClass=org.yw.springbootcamelesb.soap.CreateFileService";
     
     @Autowired(required=false)
