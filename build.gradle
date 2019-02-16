@@ -41,6 +41,7 @@ dependencies {
     compile group: 'org.apache.camel', name: 'camel-spring-boot-starter', version:'2.22.0'
     compile group: 'org.apache.camel', name: 'camel-stream-starter', version:'2.22.0'
     compile group: 'org.apache.camel', name: 'camel-cxf', version:'2.22.0'
+    compile group: 'org.apache.camel', name: 'camel-jaxb', version:'2.22.0'
     compile group: 'org.apache.camel', name: 'camel-cxf-transport', version:'2.22.0'
     compile group: 'org.apache.cxf', name: 'cxf-rt-transports-http-jetty', version:'3.2.5'
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'2.0.4.RELEASE'

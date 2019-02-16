@@ -23,6 +23,24 @@ or
 
 
 
+#### How to package fat jar
+
+```
+mvn package spring-boot:repackage
+```
+
+
+
+#### How to build docker image with maven plugin
+
+```
+mvn docker:build 
+```
+
+
+
+
+
 ### To get health check
 
 To show a summary of spring boot health check

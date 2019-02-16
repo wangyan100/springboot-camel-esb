@@ -3,12 +3,13 @@
 logging:
  level:
    org.yw: DEBUG
- file: ./springbootcamelesb.log
+ file: /opt/springbootcamelesb/springbootcamelesb.log
  root: WARN
  
 # expose actuator endpoint via HTTP
 management:
  endpoints.web.exposure.include: info,health,camelroutes
+ server.port: 8080
  
 enable:
     eventnotifier: true
