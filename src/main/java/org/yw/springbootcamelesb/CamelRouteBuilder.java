@@ -14,7 +14,7 @@ public class CamelRouteBuilder extends RouteBuilder {
     private static final String SOAP_ENDPOINT_URI = "cxf://http://localhost:{{soapEndpointPort}}/soap"
             + "?serviceClass=org.yw.springbootcamelesb.soap.CreateFileService";
     
-    @Autowired
+    @Autowired(required=false)
     LoggingSentEventNotifer loggingSentEventNotifer;
     
     @Override

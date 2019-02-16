@@ -20,6 +20,7 @@ public class CreateFileProcessor implements Processor {
 		FileCreationStatus status = new FileCreationStatus();
 		// Get the parameters list which element is the holder.
 		try {
+                        exchange.getIn().getHeaders().forEach((k,v)->System.out.println("Item : " + k + " Count : " + v));
 			MessageContentsList msgList = (MessageContentsList) exchange.getIn().getBody();
 			String fileName = (String) msgList.get(0);
 			String fileContent = (String) msgList.get(1);

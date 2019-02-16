@@ -6,11 +6,8 @@
 package org.yw.springbootcamelesb;
 
 import java.util.EventObject;
-import org.apache.camel.management.event.ExchangeSendingEvent;
 import org.apache.camel.management.event.ExchangeSentEvent;
 import org.apache.camel.support.EventNotifierSupport;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  *

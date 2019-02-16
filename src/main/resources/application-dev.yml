@@ -9,3 +9,6 @@ logging:
 # expose actuator endpoint via HTTP
 management:
  endpoints.web.exposure.include: info,health,camelroutes
+ 
+enable:
+    eventnotifier: true
