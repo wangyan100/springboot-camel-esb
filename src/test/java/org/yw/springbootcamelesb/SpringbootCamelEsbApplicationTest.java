@@ -64,7 +64,7 @@ public class SpringbootCamelEsbApplicationTest {
                 + "         <createdForPersonName>W.Y</createdForPersonName>\n"
                 + "      </soap:createFile>\n"
                 + "   </soapenv:Body>\n"
-                + "</soapenv:Envelope>");
+                + "</soapenv:Envelope>").toString();
         fileOutput.assertIsSatisfied();
 
     }

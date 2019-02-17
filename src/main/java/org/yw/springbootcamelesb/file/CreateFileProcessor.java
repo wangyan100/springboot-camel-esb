@@ -22,7 +22,7 @@ public class CreateFileProcessor implements Processor {
         // Get the parameters list which element is the holder.
         try {
             if (exchange.getIn() != null&&exchange.getIn().getBody()!=null) {
-                exchange.getIn().getHeaders().forEach((k, v) -> System.out.println("Item : " + k + " Count : " + v));
+                exchange.getIn().getHeaders().forEach((k, v) -> LOG.debug("Item : " + k + " Count : " + v));
                 MessageContentsList msgList = (MessageContentsList) exchange.getIn().getBody();
                 if (msgList != null & msgList.size() > 0) {
                     String fileName = (String) msgList.get(0);
