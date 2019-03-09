@@ -36,6 +36,12 @@ If the application is up and running, it means package is o.k , then we could cr
 
 
 
+execute below command to list images
+
+`docker images`
+
+
+
 execute below command to run docker image 
 
 `docker run -p 8080:8080 -p 9009:9009 -t springboot.docker/springbootcamelesb`
