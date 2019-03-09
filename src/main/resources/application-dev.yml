@@ -3,8 +3,15 @@
 logging:
  level:
    org.yw: DEBUG
- file: /opt/springbootcamelesb/springbootcamelesb.log
+ file: ./springbootcamelesb.log
  root: WARN
+
+#activemq setting
+spring:
+  activemq:
+    brokerUrl: tcp://localhost:61616
+    user: admin
+    password: admin
  
 # expose actuator endpoint via HTTP
 management:

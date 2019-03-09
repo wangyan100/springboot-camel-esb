@@ -35,6 +35,10 @@ dependencies {
     compile(group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'2.0.4.RELEASE') {
 		exclude(module: 'spring-boot-starter-tomcat')
     }
+    compile(group: 'org.springframework.boot', name: 'spring-boot-starter-activemq', version:'2.0.4.RELEASE') {
+        exclude(module: 'org.apache.activemq:activemq-broker')
+    }
+
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-undertow', version:'2.0.4.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version:'2.0.4.RELEASE'
     compile("org.springframework.boot:spring-boot-devtools:2.0.4.RELEASE")
@@ -43,6 +47,11 @@ dependencies {
     compile group: 'org.apache.camel', name: 'camel-cxf', version:'2.22.0'
     compile group: 'org.apache.camel', name: 'camel-jaxb', version:'2.22.0'
     compile group: 'org.apache.camel', name: 'camel-cxf-transport', version:'2.22.0'
+
+    compile('org.apache.activemq:activemq-camel:5.14.0') {
+        exclude(module: 'activemq-broker')
+    }
+
     compile group: 'org.apache.cxf', name: 'cxf-rt-transports-http-jetty', version:'3.2.5'
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'2.0.4.RELEASE'
     testCompile group: 'org.apache.camel', name: 'camel-test-spring', version:'2.22.0'
