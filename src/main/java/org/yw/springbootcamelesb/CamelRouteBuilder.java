@@ -41,8 +41,9 @@ public class CamelRouteBuilder extends RouteBuilder {
         from(SOAP_ENDPOINT_URI).routeId(ROUTE_NAME).process(createFileProcessor);
 
 
-       //from("file://target/input").log(LoggingLevel.INFO, " file is moved to file  ").to("file://target/output");
+        //from("file://target/input").log(LoggingLevel.INFO, " file is moved to file  ").to("file://target/output");
 
-       //from("file://target/input2queue").log(LoggingLevel.INFO, " file is moved to queue").to("activemq:queue:testqueue");
+        //http://localhost:8161/admin/queues.jsp
+        //from("file://target/input2queue").log(LoggingLevel.INFO, " file is moved to queue").to("activemq:queue:testqueue");
     }
 }
