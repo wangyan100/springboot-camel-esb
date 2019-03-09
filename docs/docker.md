@@ -26,7 +26,7 @@ copy springboot-camel-esb-prototype to Docker Server
 
 `mvn package spring-boot:repackage `
 
-`java -jar target/springboot-camel-esb-1.0.jar`
+`java -jar target/springbootcamelesb-1.0.jar`
 
 If the application is up and running, it means package is o.k , then we could create docker image
 
@@ -38,5 +38,5 @@ If the application is up and running, it means package is o.k , then we could cr
 
 execute below command to run docker image 
 
-`docker run -p 8080:8080 -p 9009:9009 -t springboot/springboot-camel-esb`
+`docker run -p 8080:8080 -p 9009:9009 -t springboot.docker/springbootcamelesb`
 

@@ -8,6 +8,7 @@ import org.apache.camel.component.mock.MockEndpoint;
 import org.apache.camel.test.spring.CamelSpringBootRunner;
 import org.apache.camel.test.spring.EnableRouteCoverage;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +50,7 @@ public class SpringbootCamelEsbApplicationTest {
                 });
     }
 
+    @Ignore
     @Test
     public void sendMessage() throws Exception {
         fileOutput.expectedMessageCount(1);
