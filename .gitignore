@@ -32,6 +32,7 @@
 log
 logs
 *.log
+*.log*
 
 ### MAC ###
 .DS_Store
