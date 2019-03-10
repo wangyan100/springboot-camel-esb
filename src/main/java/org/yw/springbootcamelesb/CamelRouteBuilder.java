@@ -43,6 +43,8 @@ public class CamelRouteBuilder extends RouteBuilder {
 
         //from("file://target/input").log(LoggingLevel.INFO, " file is moved to file  ").to("file://target/output");
 
+
+
         //http://localhost:8161/admin/queues.jsp
         //from("file://target/input2queue").log(LoggingLevel.INFO, " file is moved to queue").to("activemq:queue:testqueue");
     }

@@ -36,7 +36,7 @@ dependencies {
 		exclude(module: 'spring-boot-starter-tomcat')
     }
     compile(group: 'org.springframework.boot', name: 'spring-boot-starter-activemq', version:'2.0.4.RELEASE') {
-        exclude(module: 'org.apache.activemq:activemq-broker')
+        exclude(module: 'activemq-broker')
     }
 
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-undertow', version:'2.0.4.RELEASE'
