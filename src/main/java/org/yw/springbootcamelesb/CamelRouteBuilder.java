@@ -33,12 +33,12 @@ public class CamelRouteBuilder extends RouteBuilder {
         JaxbDataFormat xmlDataFormat = new JaxbDataFormat();
         JAXBContext con = JAXBContext.newInstance(FileCreationStatus.class);
         xmlDataFormat.setContext(con);
-        /*
+        
         from(SOAP_ENDPOINT_URI).routeId(ROUTE_NAME).process(createFileProcessor).id("createFileProcessor")
                 .marshal(xmlDataFormat).id("marshal").to("file:target/output").unmarshal(xmlDataFormat).id("unmarshal");
-        */
+        
 
-        from(SOAP_ENDPOINT_URI).routeId(ROUTE_NAME).process(createFileProcessor);
+        //from(SOAP_ENDPOINT_URI).routeId(ROUTE_NAME).process(createFileProcessor);
 
 
         //from("file://target/input").log(LoggingLevel.INFO, " file is moved to file  ").to("file://target/output");

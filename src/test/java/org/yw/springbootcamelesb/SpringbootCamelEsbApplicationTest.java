@@ -9,10 +9,12 @@ import org.apache.camel.test.spring.CamelSpringBootRunner;
 import org.apache.camel.test.spring.EnableRouteCoverage;
 import org.junit.Before;
 import org.junit.Ignore;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.rule.OutputCapture;
 
 @RunWith(CamelSpringBootRunner.class)
 @SpringBootTest(classes = SpringbootCamelEsbApplication.class,
@@ -20,6 +22,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 @EnableRouteCoverage
 public class SpringbootCamelEsbApplicationTest {
 
+    @Rule
+    public OutputCapture outputCapture = new OutputCapture();
+    
     @Autowired
     private CamelContext camelContext;
 
@@ -50,7 +55,7 @@ public class SpringbootCamelEsbApplicationTest {
                 });
     }
 
-    @Ignore
+    //@Ignore
     @Test
     public void sendMessage() throws Exception {
         fileOutput.expectedMessageCount(1);
