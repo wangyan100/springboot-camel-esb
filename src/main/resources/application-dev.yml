@@ -15,8 +15,13 @@ spring:
  
 # expose actuator endpoint via HTTP
 management:
- endpoints.web.exposure.include: info,health,camelroutes
- server.port: 8080
+  endpoints.web.exposure.include: info,health,camelroutes
+  endpoint.health.show-details: always
+  server.port: 8080
+
+info.app.name: SpringBoot ElasticSearch Demo
+info.app.author: Yan Wang
+info.app.encoding: UTF-8
 
 soap.port: 9009
  
