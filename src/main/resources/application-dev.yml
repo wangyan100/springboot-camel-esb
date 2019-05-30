@@ -15,7 +15,8 @@ spring:
  
 # expose actuator endpoint via HTTP
 management:
-  endpoints.web.exposure.include: info,health,camelroutes
+  #info,health,camelroutes
+  endpoints.web.exposure.include: "*"
   endpoint.health.show-details: always
   server.port: 8080
 

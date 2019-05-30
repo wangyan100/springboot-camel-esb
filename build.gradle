@@ -47,6 +47,7 @@ dependencies {
     compile group: 'org.apache.camel', name: 'camel-cxf', version:'2.22.0'
     compile group: 'org.apache.camel', name: 'camel-jaxb', version:'2.22.0'
     compile group: 'org.apache.camel', name: 'camel-cxf-transport', version:'2.22.0'
+    compile group: 'io.micrometer', name: 'micrometer-registry-prometheus'
 
     compile('org.apache.activemq:activemq-camel:5.14.0') {
         exclude(module: 'activemq-broker')
